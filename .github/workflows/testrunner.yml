@@ -19,5 +19,4 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
       - name: Build and Execute Test
-        run: mvn test -Dcucumber.options="--tags ${{ inputs.tags }}"
-
+        run: mvn test -Dcucumber.filter.tags="${{ inputs.tags }}"
